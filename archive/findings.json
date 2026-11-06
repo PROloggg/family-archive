@@ -100,5 +100,23 @@
     "A-0032",
     "A-0033",
     "A-0034"
-  ]
+  ],
+  "candidate_display_update": {
+    "date": "2026-11-06",
+    "people": 40,
+    "family_reported_people": 31,
+    "unresolved_candidates": 9,
+    "added_person_ids": [
+      "P-0033",
+      "P-0034",
+      "P-0035",
+      "P-0036",
+      "P-0037",
+      "P-0038",
+      "P-0039",
+      "P-0040"
+    ],
+    "identity_links_file": "candidate-links.json",
+    "note": "Новые карточки созданы по ранее сохранённым источникам, не являются новыми доказанными родственниками."
+  }
 }

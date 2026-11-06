@@ -1,17 +1,17 @@
 {
   "case_dir": "C:\\Users\\prologgg\\Desktop\\дерево\\noskov-family-research",
   "counts": {
-    "persons": 32,
+    "persons": 40,
     "artifacts": 34,
-    "claims": 56,
+    "claims": 64,
     "relationships": 32,
     "searches": 42
   },
   "summary": {
     "claims_by_status": {
-      "single-source": 43,
+      "single-source": 50,
       "hypothesis": 9,
-      "unresolved": 3,
+      "unresolved": 4,
       "contradicted": 1
     },
     "relationships_by_status": {

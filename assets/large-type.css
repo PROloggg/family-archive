@@ -9,3 +9,10 @@ body{font-size:24px;line-height:1.7}.main-nav a{font-size:21px}.brand{font-size:
 @media(max-width:560px){#document-meta{display:none}.document-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px}.document-actions .button{font-size:16px;padding:7px 6px;min-width:0;text-align:center}.document-actions .button:only-child{grid-column:1/-1;justify-self:start;padding-left:14px;padding-right:14px}.pdf-nav-word{display:none}.pdf-navigation{flex-wrap:nowrap;gap:9px;font-size:18px;justify-content:center}.pdf-navigation button{width:43px;min-width:43px;font-size:22px;padding:3px}.pdf-navigation input{width:65px;font-size:19px}.document-notes{max-height:94px}.document-header h2{font-size:22px}}
 
 @media(max-width:560px){.document-actions .button{font-size:18px;white-space:nowrap;padding:7px 5px}}
+/* Unresolved records remain separate from established family cards. */
+.tree-node.node-candidate{border:3px dashed #996d2c;background:#fff6e4;min-height:190px;height:auto}
+.tree-node.node-candidate .node-date{color:#704a18;font-weight:700;white-space:normal}
+.candidate-zone-title{position:absolute;font-size:30px;line-height:1.4;font-weight:700;color:#704a18;width:1600px;border-top:2px dashed #b99052;padding-top:18px;pointer-events:none}
+.candidate-comparisons{margin-top:30px;padding-top:20px;border-top:2px dashed #b99052}
+.candidate-comparisons h3{font-size:27px;line-height:1.4}
+.candidate-comparisons p{font-size:22px}

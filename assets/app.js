@@ -30,6 +30,11 @@
   const badge = p => `<span class="badge ${p.candidate?'candidate':''}">${p.tag==='Есть военные документы'?'<i class="dot document"></i>':''}${esc(p.tag)}</span>`;
   const matching = (p,q) => norm([p.label,p.role,p.places,p.dates,...p.facts.map(f=>f.value)].join(' ')).includes(norm(q));
   const personButton = (id, extra='') => {const p=people.get(id);return `<button class="relative-button ${extra}" data-person="${id}">${avatar(p)}<span>${esc(fullName(p))}</span><span aria-hidden="true">↗</span></button>`;};
+  function candidateMarkup(p){
+    const links=(D.candidateLinks||[]).filter(l=>l.candidate===p.id||l.target===p.id);
+    const spouse=p.id==='P-0032'?'P-0039':p.id==='P-0039'?'P-0032':null;
+    return (links.length?`<div class="candidate-comparisons"><h3>Возможные совпадения</h3><p class="notice candidate">Это версии для проверки. Карточки не объединены, родство с семьёй не подтверждено.</p>${links.map(l=>personButton(l.candidate===p.id?l.target:l.candidate)).join('')}</div>`:'')+(spouse?`<div class="candidate-comparisons"><h3>Супруг / супруга по записи кандидата</h3><p>Связь указана в записи A-0017. Принадлежность этой пары к исследуемой семье не установлена.</p>${personButton(spouse)}${sourceLinks(['A-0017'])}</div>`:'');
+  }
   const claimStatus = {hypothesis:'Гипотеза','single-source':'Одна цепочка источников',unresolved:'Вопрос не разрешён',corroborated:'Есть независимое подтверждение','strongly-corroborated':'Сильное подтверждение',contradicted:'Опровергнуто'};
   const origin = {family:'По сведениям семьи',memorial:'Мемориальная публикация; первичный документ не найден',hypothesis:'Предположение; не установлено',conflict:'Расхождение или открытый вопрос'};
   function toast(text) { const t=$('#toast');t.textContent=text;t.classList.add('visible');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove('visible'),3000); }
@@ -48,7 +53,9 @@
   function renderProfile() {
     const p=people.get(state.selected);
     $('#profile-host').innerHTML=profileMarkup(p);
+    $('#profile-host .profile-body').insertAdjacentHTML('beforeend',candidateMarkup(p));
     if($('#person-dialog').open)$('#mobile-profile-host').innerHTML=profileMarkup(p,true);
+    if($('#person-dialog').open)$('#mobile-profile-host .profile-body').insertAdjacentHTML('beforeend',candidateMarkup(p));
     $$('.tree-node').forEach(n=>{n.classList.toggle('active',n.dataset.person===p.id);n.setAttribute('aria-pressed',String(n.dataset.person===p.id));});
   }
   function selectPerson(id,forceModal=false,fromHash=false) {
@@ -56,6 +63,7 @@
     state.selected=id;state.profileTab='facts';renderSidebar();renderProfile();
     if(true){
       $('#mobile-profile-host').innerHTML=profileMarkup(people.get(id),true);
+      $('#mobile-profile-host .profile-body').insertAdjacentHTML('beforeend',candidateMarkup(people.get(id)));
       if(!$('#person-dialog').open)$('#person-dialog').showModal();
     }else $('#desktop-profile').scrollTop=0;
     if(!fromHash)history.replaceState(null,'',`#${state.view}/person/${id}`);
@@ -100,6 +108,9 @@
     nodes.forEach(n=>{n.depth-=minDepth;n.x=n.depth*350+50;});
     const columns=new Map();nodes.forEach(n=>{if(!columns.has(n.depth))columns.set(n.depth,[]);columns.get(n.depth).push(n);});
     columns.forEach(col=>{col.sort((a,b)=>a.y-b.y);for(let i=1;i<col.length;i++)col[i].y=Math.max(col[i].y,col[i-1].y+200);});
+    // Candidates are visible on the same canvas, without invented parent edges.
+    const candidateTop=Math.max(...[...nodes.values()].map(n=>n.y))+300;
+    D.people.filter(p=>p.candidate).forEach((p,i)=>nodes.set(p.id,{id:p.id,depth:0,x:50+(i%5)*350,y:candidateTop+100+Math.floor(i/5)*240,candidate:true}));
     layout=[...nodes.values()];graphWidth=Math.max(...layout.map(n=>n.x))+330;graphHeight=Math.max(...layout.map(n=>n.y))+230;
     $('#chart-world').style.width=`${graphWidth}px`;$('#chart-world').style.height=`${graphHeight}px`;
     const svg=$('#chart-lines');svg.setAttribute('width',graphWidth);svg.setAttribute('height',graphHeight);
@@ -108,8 +119,8 @@
     }).join('')+siblingRels.filter(r=>nodes.has(r.person_a_id)&&nodes.has(r.person_b_id)).map(r=>{
       const a=nodes.get(r.person_a_id),b=nodes.get(r.person_b_id);return `<path class="sibling" d="M${a.x},${a.y+80} C${a.x-28},${a.y+80} ${b.x-28},${b.y+80} ${b.x},${b.y+80}"/>`;
     }).join('');
-    $('#chart-nodes').innerHTML=layout.map(n=>{const p=people.get(n.id);return `<button class="tree-node ${n.sibling?'node-sibling':''} ${p.id===state.selected?'active':''}" data-person="${p.id}" style="left:${n.x}px;top:${n.y}px" aria-pressed="${p.id===state.selected}" aria-label="${esc(fullName(p))}. ${esc(p.shortDates)}${n.sibling?'. Боковая ветвь':''}">${avatar(p)}<span><span class="node-name">${esc(p.surname||p.given)}${p.surname?`<span class="node-first">${esc(p.given)}</span>`:''}</span><span class="node-date">${esc(p.shortDates)}</span></span>${['P-0005','P-0026'].includes(p.id)?'<span class="node-indicator" title="Есть военные документы"></span>':''}</button>`;}).join('');
-    $('#chart-caption').textContent=`${fullName(people.get(state.root))} → предки${state.sideBranches?' и боковые ветви':''} · ${layout.length} человек`;
+    $('#chart-nodes').innerHTML=`<div class="candidate-zone-title" style="left:50px;top:${candidateTop}px">Кандидаты · родство не подтверждено</div>`+layout.map(n=>{const p=people.get(n.id);return `<button class="tree-node ${p.candidate?'node-candidate':''} ${n.sibling?'node-sibling':''} ${p.id===state.selected?'active':''}" data-person="${p.id}" style="left:${n.x}px;top:${n.y}px" aria-pressed="${p.id===state.selected}" aria-label="${esc(fullName(p))}. ${esc(p.shortDates)}${n.sibling?'. Боковая ветвь':''}">${avatar(p)}<span><span class="node-name">${esc(p.surname||p.given)}${p.surname?`<span class="node-first">${esc(p.given)}</span>`:''}</span><span class="node-date">${esc(p.shortDates)}</span></span>${['P-0005','P-0026'].includes(p.id)?'<span class="node-indicator" title="Есть военные документы"></span>':''}</button>`;}).join('');
+    $('#chart-caption').textContent=`Все поколения · ${D.people.filter(p=>!p.candidate).length} человек по семейным сведениям + ${D.people.filter(p=>p.candidate).length} кандидатов ниже на схеме`;
     $('#chart-empty').hidden=true;
     renderTreeList();setMode(state.mode,false);defaultTreeView();
   }

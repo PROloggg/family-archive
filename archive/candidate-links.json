@@ -1,0 +1,82 @@
+[
+  {
+    "candidate": "P-0032",
+    "target": "P-0022",
+    "type": "possible-identity",
+    "note": "Возможное совпадение с семейным Василием Петровым; не подтверждено."
+  },
+  {
+    "candidate": "P-0033",
+    "target": "P-0006",
+    "type": "possible-identity",
+    "note": "Возможное совпадение личности; не подтверждено.",
+    "sources": [
+      "A-0031"
+    ]
+  },
+  {
+    "candidate": "P-0034",
+    "target": "P-0006",
+    "type": "possible-identity",
+    "note": "Возможное совпадение личности; не подтверждено.",
+    "sources": [
+      "A-0032"
+    ]
+  },
+  {
+    "candidate": "P-0035",
+    "target": "P-0008",
+    "type": "possible-identity",
+    "note": "Возможное совпадение личности; не подтверждено.",
+    "sources": [
+      "A-0031"
+    ]
+  },
+  {
+    "candidate": "P-0036",
+    "target": "P-0008",
+    "type": "possible-identity",
+    "note": "Возможное совпадение личности; не подтверждено.",
+    "sources": [
+      "A-0032"
+    ]
+  },
+  {
+    "candidate": "P-0037",
+    "target": "P-0010",
+    "type": "possible-identity",
+    "note": "Возможное совпадение личности; не подтверждено.",
+    "sources": [
+      "A-0033"
+    ]
+  },
+  {
+    "candidate": "P-0038",
+    "target": "P-0016",
+    "type": "possible-identity",
+    "note": "Возможное совпадение личности; не подтверждено.",
+    "sources": [
+      "A-0029"
+    ]
+  },
+  {
+    "candidate": "P-0039",
+    "target": "P-0024",
+    "type": "possible-identity",
+    "note": "Возможное совпадение личности; не подтверждено.",
+    "sources": [
+      "A-0017",
+      "A-0008",
+      "A-0005"
+    ]
+  },
+  {
+    "candidate": "P-0040",
+    "target": "P-0005",
+    "type": "possible-identity",
+    "note": "Возможное совпадение личности; не подтверждено.",
+    "sources": [
+      "A-0028"
+    ]
+  }
+]
