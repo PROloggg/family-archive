@@ -1,25 +1,19 @@
-# Публикация в PROloggg/family-archive
+# Публикация семейного архива
 
-Проект полностью подготовлен и закоммичен локально. Ветка main, remote origin — https://github.com/PROloggg/family-archive.git .
+Репозиторий: https://github.com/PROloggg/family-archive
+Сайт: https://prologgg.github.io/family-archive/
 
-Попытка push6ноября2026 отклонена: сохранённый логин/токен GitHub недействителен. Браузерная сессия также не авторизована. Файлы на GitHub пока не отправлены, Pages не включён.
+6 ноября 2026 года проект с документами, фотографиями и всеми кандидатами отправлен в ветку main. GitHub Pages включён: источник — ветка main, папка / (root). index.html находится в корне; зависимости и сборка не нужны. Начальный масштаб дерева — 50%.
 
-В PowerShell на этом компьютере выполните:
+Для следующих обновлений в PowerShell:
 
 ```powershell
-git credential-manager github login --username PROloggg --force --browser
-git -C 'C:\Users\prologgg\Desktop\дерево\проект-дерево' push -u origin main
+git -C 'C:\Users\prologgg\Desktop\дерево\проект-дерево' add --all
+git -C 'C:\Users\prologgg\Desktop\дерево\проект-дерево' commit -m 'Update family archive'
+git -C 'C:\Users\prologgg\Desktop\дерево\проект-дерево' push
 ```
 
-Первая команда запускает повторный вход GitHub. Пароль/токен в чат передавать не нужно.
+После push GitHub Pages автоматически публикует изменения. Статус доступен в разделе Actions репозитория. Все 9 кандидатов показаны отдельно от установленных семейных карточек с предупреждением о неподтверждённом родстве.
 
-После успешного push откройте настройки репозитория:
-https://github.com/PROloggg/family-archive/settings/pages
-
-Выберите Deploy from a branch → main → / (root) → Save. После завершения сборки сайт должен быть доступен по адресу:
-https://prologgg.github.io/family-archive/
-
-index.html находится в корне. Все документы, фотографии, реестры, превью и остальные необходимые файлы включены в коммит. Установка зависимостей и сборка не нужны. Начальный масштаб —50%.
-
-Официальная инструкция GitHub Pages:
-https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+Настройки Pages: https://github.com/PROloggg/family-archive/settings/pages
+Официальная инструкция: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
