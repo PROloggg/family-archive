@@ -20,9 +20,8 @@ body{font-size:24px;line-height:1.7}.main-nav a{font-size:21px}.brand{font-size:
 /* Give the tree almost the full screen width, keeping other sections aligned. */
 @media screen{
   #view-tree{width:calc(100vw - 40px);margin-left:calc(50% - 50vw + 20px)}
-  #view-tree>.section-heading>div{min-width:0}
+  #view-tree .chart-bottom{justify-content:flex-end}
 }
 @media screen and (max-width:800px){
   #view-tree{width:calc(100vw - 16px);margin-left:calc(50% - 50vw + 8px)}
-  #view-tree>.section-heading>.text-button{flex:0 0 118px;max-width:118px;white-space:normal}
 }
