@@ -10,9 +10,10 @@ body{font-size:24px;line-height:1.7}.main-nav a{font-size:21px}.brand{font-size:
 
 @media(max-width:560px){.document-actions .button{font-size:18px;white-space:nowrap;padding:7px 5px}}
 /* Unresolved records remain separate from established family cards. */
-.tree-node.node-candidate{border:3px dashed #996d2c;background:#fff6e4;min-height:190px;height:auto}
+.tree-node.node-candidate{border:3px dashed #996d2c;background:#fff6e4;min-height:230px;height:auto}
 .tree-node.node-candidate .node-date{color:#704a18;font-weight:700;white-space:normal}
-.candidate-zone-title{position:absolute;font-size:30px;line-height:1.4;font-weight:700;color:#704a18;width:1600px;border-top:2px dashed #b99052;padding-top:18px;pointer-events:none}
+.node-candidate-label{display:block;font-size:18px;font-weight:700;line-height:1.35;color:#704a18;margin-bottom:9px}
+#chart-lines .candidate-link{stroke:#996d2c;stroke-width:2;stroke-dasharray:6 5;fill:none}
 .candidate-comparisons{margin-top:30px;padding-top:20px;border-top:2px dashed #b99052}
 .candidate-comparisons h3{font-size:27px;line-height:1.4}
 .candidate-comparisons p{font-size:22px}
