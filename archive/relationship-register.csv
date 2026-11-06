@@ -1,0 +1,33 @@
+﻿relationship_id,person_a_id,relationship_type,person_b_id,biological_legal_household,claim_ids,supporting_artifact_ids,contradicting_artifact_ids,independence_groups,status,confidence,rationale
+R-0001,P-0003,parent-of,P-0001,reported-parentage; type not independently established,C-0001,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0002,P-0015,parent-of,P-0001,reported-parentage; type not independently established,C-0002,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0003,P-0003,parent-of,P-0002,reported-parentage; type not independently established,C-0003,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0004,P-0015,parent-of,P-0002,reported-parentage; type not independently established,C-0004,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0005,P-0004,parent-of,P-0003,reported-parentage; type not independently established,C-0005,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0006,P-0009,parent-of,P-0003,reported-parentage; type not independently established,C-0006,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0007,P-0005,parent-of,P-0004,reported-parentage; type not independently established,C-0007,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0008,P-0007,parent-of,P-0004,reported-parentage; type not independently established,C-0008,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0009,P-0006,parent-of,P-0005,reported-parentage; type not independently established,C-0009,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0010,P-0008,parent-of,P-0007,reported-parentage; type not independently established,C-0010,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0011,P-0010,parent-of,P-0009,reported-parentage; type not independently established,C-0011,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0012,P-0012,parent-of,P-0009,reported-parentage; type not independently established,C-0012,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0013,P-0011,parent-of,P-0010,reported-parentage; type not independently established,C-0013,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0014,P-0013,parent-of,P-0012,reported-parentage; type not independently established,C-0014,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0015,P-0014,parent-of,P-0012,reported-parentage; type not independently established,C-0015,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0016,P-0016,parent-of,P-0015,reported-parentage; type not independently established,C-0016,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0017,P-0021,parent-of,P-0015,reported-parentage; type not independently established,C-0017,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0018,P-0017,parent-of,P-0016,reported-parentage; type not independently established,C-0018,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0019,P-0019,parent-of,P-0016,reported-parentage; type not independently established,C-0019,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0020,P-0018,parent-of,P-0017,reported-parentage; type not independently established,C-0020,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0021,P-0020,parent-of,P-0019,reported-parentage; type not independently established,C-0021,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0022,P-0022,parent-of,P-0021,reported-parentage; type not independently established,C-0022,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0023,P-0024,parent-of,P-0021,reported-parentage; type not independently established,C-0023,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0024,P-0023,parent-of,P-0022,reported-parentage; type not independently established,C-0024,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0025,P-0025,parent-of,P-0024,reported-parentage; type not independently established,C-0025,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0026,P-0017,parent-of,P-0026,reported-parentage; type not independently established,C-0026;C-0040,A-0001;A-0010,,IG-family-intake;IG-semenov-loss-chain,single-source,,Отец прямо назван в военном донесении и в семейной схеме; независимость семейной информации ещё не установлена. Статусsingle-source сохранён.
+R-0027,P-0019,parent-of,P-0026,reported-parentage; type not independently established,C-0027,A-0001,,IG-family-intake,single-source,,Семейная схема; независимого документального подтверждения нет
+R-0028,P-0015,sibling-of,P-0027,,C-0028,A-0001,,IG-family-intake,single-source,,Свидетельство семьи; общие родители не добавлены как установленный факт
+R-0029,P-0015,sibling-of,P-0028,,C-0029,A-0001,,IG-family-intake,single-source,,Свидетельство семьи; общие родители не добавлены как установленный факт
+R-0030,P-0015,sibling-of,P-0029,,C-0030,A-0001,,IG-family-intake,single-source,,Свидетельство семьи; общие родители не добавлены как установленный факт
+R-0031,P-0003,sibling-of,P-0030,,C-0031,A-0001,,IG-family-intake,single-source,,Свидетельство семьи; общие родители не добавлены как установленный факт
+R-0032,P-0003,sibling-of,P-0031,,C-0032,A-0001,,IG-family-intake,single-source,,Свидетельство семьи; общие родители не добавлены как установленный факт

@@ -1,0 +1,6 @@
+# Keep archived originals and their SHA-256 checksums byte-for-byte intact.
+* -text
+*.jpg binary
+*.png binary
+*.pdf binary
+*.docx binary

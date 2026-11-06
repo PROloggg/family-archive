@@ -1,0 +1,20 @@
+{
+  "source": "manual",
+  "source_record_id": "municipal-fonds-31-63-102",
+  "record": {
+    "source_or_domain": "lebadminist.ucoz.ru",
+    "id": "municipal-fonds-31-63-102",
+    "source_title": "Маршрут к документам Лебяжьего и Черешково",
+    "source_url_or_path": "https://lebadminist.ucoz.ru/arxiv/spisok_fondov_municipalnogo_arkhiva_lebjazhevskogo.docx",
+    "repository_or_archive": "Муниципальный архив Лебяжьевского района (старый каталог)",
+    "archival_reference": "Ф.31; Ф.63; Ф.102 (разные фондообразователи; конкретные описи и дела не определены)",
+    "summary": "Существование фондов в опубликованном перечне; именные записи и наличие похозяйственных книг ещё не проверены",
+    "snapshot": {
+      "fund31": "Администрация Перволебяжьевского сельсовета1992–2009",
+      "fund63": "Администрация Лебяжьевского поссовета1941–2010",
+      "fund102": "Колхоз им.Ленина Черешковского сельсовета1949–1957"
+    }
+  },
+  "locations": [],
+  "registered_at": "2026-11-06T05:22:38+00:00"
+}

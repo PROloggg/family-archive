@@ -1,0 +1,51 @@
+{
+  "url": "https://pamyat-naroda.ru/heroes/podvig-chelovek_predstavlenie19236580/",
+  "text": "Память народа\nРАЗДЕЛЫ\nEn\nГлавная страница/ Участники войны/\nНосков Сергей Федорович\nГод рождения: __.__.1906\nДействия Скачать документы \nУпоминается в 1 документе:\nОрден Славы III степени\nО документе\nПохожие документы\nСводная информация\nДокументы\nБоевой путь\nДополнительная информация\nСтрока в наградном списке\nhhh Подвиг Наградной лист\n\tСтраница:\t\n\n55\n\n▾\n\tиз 56\t\n  \nРассекречено в соответствии с приказом Министра обороны РФ от 8 мая 2007 года N181 «О рассекречиван архивных документов Красной Армии и Военно-Морского Флота за период Великой Отечественной войны 1941-1945 годов» (с изменениями на 30 мая 2009 года)\nО проекте\n \nВопросы и ответы\n \nКак искать\n \nОбратная связь\n \nПравовая информация\n \nПользовательское соглашение\n© Министерство обороны Российской Федерации",
+  "cards": [
+    {
+      "id": "19236580",
+      "type": "chelovek_predstavlenie",
+      "pages": [
+        {
+          "id": 18623309,
+          "source_document_id": 19236497,
+          "source_database_id": 1,
+          "source_table_id": 1,
+          "source_page_id": 19236578,
+          "document_id": 19236497,
+          "document_name": null,
+          "document_guid": "fc46b8aca8395a9183a03e6c5ae1c223",
+          "page_guid": "f325fcd6394b6fe0405b82a6a220bfb1",
+          "page_position": 55,
+          "src": "<i src=\"VS/084/033-0686044-1832+004-1831/00000423.jpg\"><s c=\"0,10,1772,2608\" id=\"19236580\" /><v c=\"852,1120,798,74\" /></i>",
+          "path": "https://cdn.pamyat-naroda.ru/images2/VS%2F084%2F033-0686044-1832%2B004-1831%2F00000423.jpg",
+          "title": "Наградной лист",
+          "page_dates": null,
+          "date_to": null,
+          "date_from": null,
+          "page_divisions": null
+        },
+        {
+          "id": 18623309,
+          "source_document_id": 19236497,
+          "source_database_id": 1,
+          "source_table_id": 1,
+          "source_page_id": 19236579,
+          "document_id": 19236497,
+          "document_name": null,
+          "document_guid": "fc46b8aca8395a9183a03e6c5ae1c223",
+          "page_guid": "370ce4e5c784e7c1e137e29ccfe03e4d",
+          "page_position": 56,
+          "src": "<i src=\"VS/084/033-0686044-1832+004-1831/00000424.jpg\" />",
+          "path": "https://cdn.pamyat-naroda.ru/images2/VS%2F084%2F033-0686044-1832%2B004-1831%2F00000424.jpg",
+          "title": "Наградной лист",
+          "page_dates": null,
+          "date_to": null,
+          "date_from": null,
+          "page_divisions": null
+        }
+      ],
+      "text": "Орден Славы III степени\nО документе"
+    }
+  ]
+}
